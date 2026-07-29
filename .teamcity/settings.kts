@@ -28,6 +28,10 @@ version = "2026.1"
 project {
 
     buildType(Build)
+
+    params {
+        password("env.NEXUS_PASSWORD", "credentialsJSON:6e594f85-b483-476a-bd37-b9b13df2085f")
+    }
 }
 
 object Build : BuildType({
