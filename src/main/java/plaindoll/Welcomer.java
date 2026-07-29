@@ -1,43 +1,18 @@
 package plaindoll;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
-public class WelcomerTest {
-	private Welcomer welcomer = new Welcomer();
-
+public class Welcomer{
 	// Если хочешь больше веселья и информации про ДевОпс - приходи в мои каналы NotOps (telegram, YT, Boosty, Patreon)
 	// https://t.me/notopsofficial
-	@Test
-	public void welcomerSaysWelcome() {
-		assertThat(welcomer.sayWelcome(), containsString("Welcome"));
+	public String sayWelcome() {
+		return "Welcome home, good hunter. What is it your desire?";
 	}
-
-	@Test
-	public void welcomerSaysFarewell() {
-		assertThat(welcomer.sayFarewell(), containsString("Farewell"));
+	public String sayFarewell() {
+		return "Farewell, good hunter. May you find your worth in waking world.";
 	}
-
-	@Test
-	public void welcomerSaysHunter() {
-		assertThat(welcomer.sayWelcome(), containsString("hunter"));
-		assertThat(welcomer.sayFarewell(), containsString("hunter"));
+	public String sayNeedGold(){
+		return "Not enough gold";
 	}
-
-	@Test
-	public void welcomerSaysSilver(){
-		assertThat(welcomer.sayNeedGold(), containsString("gold"));
-	}
-
-	@Test
-	public void welcomerSaysSomething(){
-		assertThat(welcomer.saySome(), containsString("something"));
-	}
-
-	@Test
-	public void welcomerSaysHunterReply() {
-		assertThat(welcomer.sayHunterReply(), containsString("hunter"));
+	public String saySome(){
+		return "something in the way";
 	}
 }
